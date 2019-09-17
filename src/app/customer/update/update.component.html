@@ -1,0 +1,27 @@
+<div *ngIf="customer" >
+  <form #customerForm="ngForm" (ngSubmit)="onSubmit(customerForm)">
+    <div hidden>
+      <label>
+        Id
+        <br>
+        <input type="number" name="id" ngModel [(ngModel)] = "customer.id">
+      </label>
+    </div>
+    <div>
+      <label>
+        FirstName
+        <br>
+        <input type="text" name="firstName" ngModel [(ngModel)] = "customer.firstName">
+      </label>
+    </div>
+    <div>
+      <label>
+        LastName
+        <br>
+        <input type="text" name="lastName" ngModel [(ngModel)] = "customer.lastName">
+      </label>
+    </div>
+    <button type="submit" routerLink="/customer/list">Submit</button>
+  </form>
+</div>
+
